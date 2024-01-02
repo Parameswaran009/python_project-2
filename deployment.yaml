@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: flask
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flask
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: flask
+    spec:
+      containers:
+      - image: username/reponame with tag
+        name: flask
+        resources: {}
+status: {}
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 5000
+  selector:
+    app: flask
+
