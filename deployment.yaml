@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  creationTimestamp: null
+  name: flask-deployment
   labels:
     app: flask
 spec:
@@ -12,12 +12,16 @@ spec:
   strategy: {}
   template:
     metadata:
-      creationTimestamp: null
       labels:
         app: flask
     spec:
       containers:
-      - image: username/reponame with tag
-        name: flask
-        resources: {}
-status: {}
+      - name: flask
+        image: username/reponame:tag 
+        resources:
+          limits:
+            memory: "512Mi"  
+            cpu: "0.5"      
+          requests:
+            memory: "256Mi" 
+            cpu: "0.25"
