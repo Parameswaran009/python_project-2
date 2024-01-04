@@ -25,5 +25,6 @@ spec:
           requests:
             memory: "256Mi"
             cpu: "0.25"
+        imagePullPolicy: IfNotPresent
       imagePullSecrets:
       - name: regcred
