@@ -18,5 +18,12 @@ spec:
       containers:
       - name: flask
         image: parameswaran009/argocd:20
-        resources: {}
+        resources:
+          requests:
+            memory: "2Gi"  
+            cpu: "2"      
+          limits:
+            memory: "4Gi"  
+            cpu: "4"      
+        
 status: {}
