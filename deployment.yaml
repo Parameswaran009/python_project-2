@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: flask
-        image: username/reponame with tag
+        image: username/reponame:19
         resources:
           limits:
             memory: "512Mi"
