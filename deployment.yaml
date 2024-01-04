@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: flask-deployment
+  name: flask
   labels:
     app: flask
 spec:
@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: flask
-        image: username/reponame:20
+        image: parameswaran009/argocd:20
         resources:
           limits:
             memory: "512Mi"
