@@ -18,13 +18,5 @@ spec:
       containers:
       - name: flask
         image: parameswaran009/argocd:20
-        resources:
-          limits:
-            memory: "512Mi"
-            cpu: "0.5"
-          requests:
-            memory: "256Mi"
-            cpu: "0.25"
-        imagePullPolicy: Always
-      imagePullSecrets:
-      - name: regcred
+        resources: {}
+status: {}
